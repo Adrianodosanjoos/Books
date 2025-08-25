@@ -1,4 +1,5 @@
 import  {livros} from './UltimosLancamentos'
+import {Titulo} from '../Titulo'
 import styled from 'styled-components'
 
 const UltimosLancamentosContainer = styled.section `
@@ -8,15 +9,6 @@ display: flex;
 flex-direction: column;
 `
 
-const Titulo = styled.h2`
-width: 100%;
-padding: 30px 0;
-background-color: #fff;
-color: #eb9b00;
-font-size: 36px;
-text-align: center;
-margin: 0;
-`
 
 const NovosLivrosContainer = styled.div `
 margin-top:30px;
@@ -31,7 +23,10 @@ function UltimosLancamentos () {
     return ( 
         <UltimosLancamentosContainer>
           
-          <Titulo>Ultimos Lancamentos</Titulo>
+          <Titulo
+          cor='#eb9b00' 
+          tamanhoFonte='36px' 
+          >Ultimos Lancamentos</Titulo>
           <NovosLivrosContainer>
        {livros.map(livro => (
         <img src={livro.src}/>
